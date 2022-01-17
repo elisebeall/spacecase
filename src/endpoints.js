@@ -7,7 +7,7 @@ const env = 'lldev';
 // const env = 'll';
 
 const endpoints = {
-  spacecraft: `https://${env}.thespacedevs.com/2.2.0/swagger/spacecraft/`,
+  spacecraft: `https://${env}.thespacedevs.com/2.2.0/spacecraft/?limit=1000&offset=0`,
   /* RETURNS:
     {
       "count": 0,
@@ -45,7 +45,7 @@ const endpoints = {
       ]
     }
   */
-  craftSearch: `https://${env}.thespacedevs.com/2.2.0/swagger/spacecraft/?limit=1000&offset=0&search=`,
+  craftSearch: `https://${env}.thespacedevs.com/2.2.0/spacecraft/?limit=1000&offset=0&search=`,
   /* QUERYING GEMINI RETURNS:
    {
      "count": 12,
@@ -86,3 +86,5 @@ const endpoints = {
   */
 
 }
+
+export default endpoints;
