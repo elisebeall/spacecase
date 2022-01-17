@@ -5,7 +5,7 @@ import Button from './Button';
 const Launch = () => {
   return (
     <>
-      <h1>Showcase</h1>
+      <h1>spacecase</h1>
       <Button />
     </>
   )

@@ -11,6 +11,8 @@ const Main = () => {
   const { data: spacecraft, isLoading, error } = useFetch(endpoints.spacecraft);
   //const { data: launchVehicles, isLoading, error } = useFetch();
 
+  console.log(spacecraft);
+
   return (
     <>
       <Nav />
