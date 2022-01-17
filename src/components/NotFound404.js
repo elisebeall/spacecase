@@ -1,4 +1,4 @@
-import '../css/404.css';
+import '../css/NotFound404.css';
 import { Fragment } from 'react';
 
 const NotFound404 = () => {

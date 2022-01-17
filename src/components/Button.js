@@ -5,8 +5,8 @@ import { GiSpaceShuttle } from 'react-icons/gi';
 
 const Button = () => {
   return (
-    <Link to="/spacecrafts">
-      <img src={GiSpaceShuttle} alt="go to spacecrafts" />
+    <Link to="/spacecraft">
+      <GiSpaceShuttle className="icon-large" />
     </Link>
   )
 }

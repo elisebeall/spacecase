@@ -1,5 +1,6 @@
 import '../css/SingleBox.css';
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleBox = ({ craft }) => {
   const {
@@ -26,22 +27,8 @@ const SingleBox = ({ craft }) => {
 
   return (
     <>
-      <table>
-        <th>{name}</th>
-        <tr>
-          <td>ID:</td>
-          <td>{id}</td>
-          <td>SERIAL NUM:</td>
-          <td>{serial_number}</td>
-        </tr>
-        <tr>
-          <td>STATUS:</td>
-          <td>{status.name}</td>
-        </tr>
-        <tr>
-          <td>{description}</td>
-        </tr>
-      </table>
+      <img src={spacecraft_config.image_url} alt={spacecraft_config.name} />
+      <Link to={`/details/${id}`}>more details</Link>
     </>
   )
 }
