@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 const SingleBox = ({ craft }) => {
   const type = useParams().type;
 
-  return type.includes('spacecraft') ?
+  return type.includes('launchers') ?
     (
       <div className="craft-image-container">
         <Link to={`/details/${type}/${craft.id}`}>
