@@ -45,14 +45,16 @@
 
 html {
   font-size: 15px;
+  color: white;
 }
 
 body {
-  background-color: purple;
+  background-image: url('./assets/jeremy-perkins-uhjiu8FjnsQ-unsplash.jpg');
 }
 
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 button {

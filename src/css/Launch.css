@@ -1,0 +1,15 @@
+h1 {
+  font-family: 'newspace';
+  font-size: 10rem;
+}
+
+.icon-large {
+  color: white;
+  height: 50rem;
+  width: 50rem;
+}
+
+.icon-large:hover {
+  color: white;
+  cursor: pointer;
+}

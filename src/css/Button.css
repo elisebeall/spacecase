@@ -1,9 +1,5 @@
-h1 {
-  font-family: 'redrocket';
-  font-size: 10rem;
-}
-
-.icon-large {
-  height: 50rem;
-  width: 50rem;
+.icon-small {
+  color: white;
+  height: 5rem;
+  width: 5rem;
 }
