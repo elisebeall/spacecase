@@ -3,10 +3,10 @@ import { Fragment } from 'react';
 import Search from './Search';
 import Button from './Button';
 
-const Nav = ({ searchCrafts, searchLaunchers }) => {
+const Nav = () => {
   return (
     <>
-      <Search searchCrafts={searchCrafts} searchLaunchers={searchLaunchers} />
+      <Search />
       <Button />
     </>
   )

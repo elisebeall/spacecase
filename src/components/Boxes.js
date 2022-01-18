@@ -7,17 +7,19 @@ import SingleBox from './SingleBox';
 
 const Boxes = () => {
   const type = useParams().type;
-  const { spacecraft } = useContext(CraftContext);
-  const { launchers } = useContext(LaunchersContext);
+  const { filteredSpacecraft } = useContext(CraftContext);
+  const { filteredLaunchers } = useContext(LaunchersContext);
+
+  console.log('filteredSpacecraft', filteredSpacecraft);
 
   return type.includes('spacecraft') ?
     (
       <>
-        {spacecraft.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
+        {filteredSpacecraft.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
       </>
     ) : (
       <>
-        {launchers.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
+        {filteredLaunchers.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
       </>
     )
 }
