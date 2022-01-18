@@ -85,7 +85,6 @@ input {
   width: 25rem;
   font-size: 3rem;
   font-family: 'clonewars';
-  text-decoration-color: rgba(54, 38, 167, 1);
 }
 
 input:active {
