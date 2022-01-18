@@ -1,6 +1,7 @@
 import './App.css';
 import { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import LaunchersContextProvider from './contexts/LaunchersContext';
 import CraftContextProvider from './contexts/CraftContext';
 import Launch from './components/Launch';
 import Main from './components/Main';
@@ -9,15 +10,17 @@ import NotFound404 from './components/NotFound404';
 
 const App = () => {
   return (
-    <CraftContextProvider>
-      <Routes>
-        <Route path="/" element={<Launch />} />
-        <Route path="/launch-vehicles" element={<Main />} />
-        <Route path="/spacecraft" element={<Main />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="/*" element={<NotFound404 />} />
-      </Routes>
-    </CraftContextProvider>
+    <LaunchersContextProvider>
+      <CraftContextProvider>
+        <Routes>
+          <Route path="/" element={<Launch />} />
+          <Route path="/launchers/:type" element={<Main />} />
+          <Route path="/spacecraft/:type" element={<Main />} />
+          <Route path="/details/:type/:id" element={<Details />} />
+          <Route path="/*" element={<NotFound404 />} />
+        </Routes>
+      </CraftContextProvider>
+    </LaunchersContextProvider>
   )
 }
 

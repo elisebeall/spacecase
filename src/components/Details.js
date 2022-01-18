@@ -7,46 +7,13 @@ import useFetch from '../hooks/useFetch';
 import endpoints from '../endpoints.js';
 
 const Details = () => {
+  const type = useParams().type;
   const detailsID = useParams().id;
-  const { data: details, isLoading, error } = useFetch(endpoints.craftID+`${detailsID}`);
 
-  console.log(details)
+  let url;
+  type.includes('spacecraft') ? url = endpoints.craftID+`${detailsID}` : url = endpoints.launcherID+`${detailsID}`;
 
-  const {
-    id,
-    url,
-    name,
-    serial_number,
-    status, /* {id, name} */
-    description,
-    spacecraft_config,
-    /*
-      {
-        id,
-        url,
-        name,
-        type, {id, name}
-        agency, {id, url, name, type, country_code, abbrev, description, administrator, founding_year, launchers, spacecraft, parent, image_url}
-        in_use,
-        capability,
-        history,
-        details,
-        maiden_flight,
-        height,
-        diameter,
-        human_rated,
-        crew_capacity,
-        payload_capacity,
-        flight_life,
-        image_url,
-        nation_url,
-        wiki_link,
-        info_link
-      }
-    }
-    */
-    flights
-  } = details;
+  const { data: details, isLoading, error } = useFetch(url);
 
   return (
     <>
@@ -55,19 +22,19 @@ const Details = () => {
           {error ? <Error /> :
             <>
               <table>
-                <th>{name}</th>
+                <th>{details?.name}</th>
                 <tr>
                   <td>ID:</td>
-                  <td>{id}</td>
+                  <td>{details?.id}</td>
                   <td>SERIAL NUM:</td>
-                  <td>{serial_number}</td>
+                  <td>{details?.serial_number}</td>
                 </tr>
                 <tr>
                   <td>STATUS:</td>
-                  <td>{status.name}</td>
+                  <td>{details?.status.name}</td>
                 </tr>
                 <tr>
-                  <td colspan="4">{description}</td>
+                  <td colspan="4">{details?.description}</td>
                 </tr>
               </table>
             </>
