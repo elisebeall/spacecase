@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from './Loading';
 import Error from './Error';
+import Button from './Button';
 import useFetch from '../hooks/useFetch';
 import endpoints from '../endpoints.js';
 
@@ -21,6 +22,7 @@ const Details = () => {
         <>
           {error ? <Error /> :
             <>
+              <Button />
               <table>
                 <th>{details?.name}</th>
                 <tr>
