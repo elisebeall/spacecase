@@ -1,15 +1,44 @@
 h1 {
   font-family: 'newspace';
   font-size: 10rem;
+  text-align: center;
+}
+
+.launch-link-container {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .icon-large {
-  color: white;
+  color: #FBFBFF;
   height: 50rem;
   width: 50rem;
 }
 
 .icon-large:hover {
-  color: white;
+  color: #FF331F;
   cursor: pointer;
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .launch-link-container {
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .icon-large {
+    height: 30rem;
+    width: 30rem;
+  }
+
+  .icon-large:active {
+    color: #FF331F;
+  }
 }

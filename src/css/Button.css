@@ -1,5 +1,32 @@
-.icon-small {
-  color: white;
-  height: 5rem;
-  width: 5rem;
+.home-btn-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-btn {
+  height: 6rem;
+  width: 6rem;
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 0.5));
+  color: rgba(251, 251, 255, 1);
+  cursor: pointer;
+}
+
+.home-btn:hover {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 1));
+}
+
+/*
+  On home btn hover
+  display home btn text
+*/
+
+.home-btn-text {
+  /* display: none; */
+  font-size: 3rem;
+  font-family: 'clonewars';
+}
+
+.home-btn-text:hover {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 0.5));
 }
