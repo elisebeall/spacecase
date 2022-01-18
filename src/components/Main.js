@@ -31,18 +31,18 @@ const Main = () => {
   }, [data])
 
   return (
-    <>
+    <div className="main-container">
       <Nav />
       {isLoading ? <Loading /> :
         <>
-          {error ? <Error /> :
+          {error ? <Error error={error}/> :
             <>
               <Boxes />
             </>
           }
         </>
       }
-    </>
+    </div>
   )
 }
 

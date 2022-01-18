@@ -9,13 +9,13 @@ const SingleBox = ({ craft }) => {
     (
       <>
         <Link to={`/details/${type}/${craft.id}`}>
-          <img src={craft.spacecraft_config.image_url} alt={craft.name} />
+          <img className="craft-image" src={craft.spacecraft_config.image_url} alt={craft.name} />
         </Link>
       </>
     ) : (
       <>
         <Link to={`/details/${type}/${craft.id}`}>
-          <img src={craft.image_url} alt={craft.launcher_config.name} />
+          <img className="craft-image" src={craft.image_url} alt={craft.launcher_config.name} />
         </Link>
       </>
     )
