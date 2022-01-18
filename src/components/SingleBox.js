@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 const SingleBox = ({ craft }) => {
   const type = useParams().type;
 
-  return type.includes('launchers') ?
+  return type.includes('spacecraft') ?
     (
       <div className="craft-image-container">
         <Link to={`/details/${type}/${craft.id}`}>
@@ -24,3 +24,12 @@ const SingleBox = ({ craft }) => {
 }
 
 export default SingleBox;
+/*
+<div className="craft-image-container">
+  <Link to={`/details/${type}/${craft.id}`}>
+    <img className="craft-image" src={craft.image_url} alt={craft.launcher_config.name} />
+    <h2 className="craft-image-text">{craft.launcher_config.name}</h2>
+  </Link>
+</div>
+
+*/
