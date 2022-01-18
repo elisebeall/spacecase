@@ -1,27 +1,31 @@
 import '../css/Search.css';
 import { Fragment, useState, useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import { LaunchersContext } from '../contexts/LaunchersContext';
 import { CraftContext } from '../contexts/CraftContext';
 import { FaSearch } from 'react-icons/fa';
 
-const Search = () => {
+const Search = ({ searchCrafts, searchLaunchers }) => {
+  const type = useParams().type;
   const [query, setQuery] = useState('');
   const { spacecraft, setSpacecraft } = useContext(CraftContext);
+  const { launchers, setLaunchers } = useContext(LaunchersContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSpacecraft(query);
+  const handleChange = (e) => {
+    setQuery(e.target.value);
+    type.includes('spacecraft') ? searchCrafts(e.target.value) : searchLaunchers(e.target.value);
   }
 
   return (
-    <form onSubmit={e => handleSubmit}>
+    <>
       <FaSearch className="icon-small" aria-hidden="true" />
       <input
         type="text"
-        placeholder="search..."
+        placeholder="search by name..."
         value={query}
-        onChange={e => setQuery(e.target.value)}
+        onChange={e => handleChange(e)}
       />
-    </form>
+    </>
   )
 }
 

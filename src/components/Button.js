@@ -1,12 +1,12 @@
 import '../css/Button.css';
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { GiSpaceShuttle } from 'react-icons/gi';
+import { MdHome as Home } from 'react-icons/md';
 
 const Button = () => {
   return (
-    <Link to="/spacecraft">
-      <GiSpaceShuttle className="icon-large" />
+    <Link to="/">
+      <Home className="icon-small" aria-label="home button" />
     </Link>
   )
 }

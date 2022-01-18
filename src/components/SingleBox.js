@@ -1,36 +1,26 @@
 import '../css/SingleBox.css';
-import { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import { Fragment, useContext } from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 const SingleBox = ({ craft }) => {
-  const {
-    id,
-    url,
-    name,
-    serial_number,
-    status, /* {id, name} */
-    description,
-    spacecraft_config
-    /*
-      {
-        id,
-        url,
-        name,
-        type, {id, name}
-        agency, {id, url, name, type}
-        in_use,
-        image_url
-      }
-    }
-    */
-  } = craft;
+  const type = useParams().type;
 
-  return (
-    <>
-      <img src={spacecraft_config.image_url} alt={spacecraft_config.name} />
-      <Link to={`/details/${id}`}>more details</Link>
-    </>
-  )
+  return type.includes('spacecraft') ?
+    (
+      <>
+        <Link to={`/details/${type}/${craft.id}`}>
+          <img src={craft.spacecraft_config.image_url} alt={craft.name} />
+          more details
+        </Link>
+      </>
+    ) : (
+      <>
+        <Link to={`/details/${type}/${craft.id}`}>
+          <img src={craft.image_url} alt={craft.launcher_config.name} />
+          more details
+        </Link>
+      </>
+    );
 }
 
 export default SingleBox;
