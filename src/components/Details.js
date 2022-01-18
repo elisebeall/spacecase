@@ -12,7 +12,9 @@ const Details = () => {
   const detailsID = useParams().id;
 
   let url;
-  type.includes('spacecraft') ? url = endpoints.craftID+`${detailsID}` : url = endpoints.launcherID+`${detailsID}`;
+  type.includes('spacecraft') ?
+    url = endpoints.craftID+`${detailsID}` :
+    url = endpoints.launcherID+`${detailsID}`;
 
   const { data: details, isLoading, error } = useFetch(url);
 
@@ -20,7 +22,7 @@ const Details = () => {
     <>
       {isLoading ? <Loading /> :
         <>
-          {error ? <Error /> :
+          {error ? <Error error={error} /> :
             <>
               <Button />
               <table>
@@ -37,6 +39,9 @@ const Details = () => {
                 </tr>
                 <tr>
                   <td colspan="4">{details?.description}</td>
+                </tr>
+                <tr>
+                  <td>{details?.spacecraft_config.info_link}</td>
                 </tr>
               </table>
             </>
