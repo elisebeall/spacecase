@@ -1,15 +1,81 @@
 h1 {
   font-family: 'newspace';
-  font-size: 10rem;
+  font-size: 13rem;
+  font-stretch: extra-expanded;
+  text-align: center;
+}
+
+.launch-link-container {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .icon-large {
-  color: white;
+  color: #FBFBFF;
   height: 50rem;
   width: 50rem;
 }
 
 .icon-large:hover {
-  color: white;
+  color: #FF331F;
   cursor: pointer;
+  filter: drop-shadow(0rem 3rem 2rem rgba(101, 126, 212, 1));
+}
+
+@media screen and (max-width: 1400px) {
+  h1 {
+    font-size: 8rem;
+  }
+
+  .launch-link-container {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .icon-large {
+    height: 40rem;
+    width: 40rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  .launch-link-container {
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .icon-large {
+    height: 30rem;
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .launch-link-container {
+    margin: 0;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .icon-large {
+    height: 30rem;
+    width: 30rem;
+    padding: 2rem;
+  }
+
+  .icon-large:active {
+    color: #FF331F;
+  }
 }

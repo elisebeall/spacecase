@@ -1,4 +1,31 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .icon-small {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 0.5));
+  color: rgba(251, 251, 255, 1);
   height: 5rem;
   width: 5rem;
+  cursor: pointer;
+}
+
+.icon-small:hover {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 1));
+}
+
+/*
+  I would like the hover & active rules to be when the input appears
+  for search. The home button should have text that appears saying
+  'go back to launch'
+*/
+
+.icon-small:active {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 1));
+}
+
+input:hover {
+  filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 1));
 }

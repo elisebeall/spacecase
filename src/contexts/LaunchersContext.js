@@ -15,7 +15,7 @@ const LaunchersContextProvider = (props) => {
 
   return (
     <LaunchersContext.Provider
-      value={{launchers, setLaunchers, filteredLaunchers, searchLaunchers}}>
+      value={{launchers, setLaunchers, filteredLaunchers, setFilteredLaunchers, searchLaunchers}}>
         { props.children }
     </LaunchersContext.Provider>
   )

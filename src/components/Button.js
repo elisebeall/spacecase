@@ -6,7 +6,10 @@ import { MdHome as Home } from 'react-icons/md';
 const Button = () => {
   return (
     <Link to="/">
-      <Home className="icon-small" aria-label="home button" />
+      <div className="home-btn-container">
+        <Home className="home-btn" aria-label="home button" />
+        <h2 className="home-btn-text">go back to launch</h2>
+      </div>
     </Link>
   )
 }
