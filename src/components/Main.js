@@ -1,5 +1,6 @@
 import '../css/Main.css';
-import { Fragment } from 'react';
+import { Fragment, useContext } from 'react';
+import { CraftContext } from '../contexts/CraftContext';
 import Nav from './Nav';
 import Loading from './Loading';
 import Error from './Error';
@@ -8,8 +9,11 @@ import useFetch from '../hooks/useFetch';
 import endpoints from '../endpoints.js';
 
 const Main = () => {
-  const { data: spacecraft, isLoading, error } = useFetch(endpoints.spacecraft);
-  //const { data: launchVehicles, isLoading, error } = useFetch();
+  const { data, isLoading, error } = useFetch(endpoints.spacecraft);
+  const {spacecraft, setSpacecraft} = useContext(CraftContext);
+
+  setSpacecraft(data?.results);
+  console.log(spacecraft)
 
   return (
     <>
@@ -18,7 +22,7 @@ const Main = () => {
         <>
           {error ? <Error /> :
             <>
-              <Boxes spacecraft={spacecraft} />
+              <Boxes />
             </>
           }
         </>
