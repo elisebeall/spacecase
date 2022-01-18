@@ -12,8 +12,8 @@ import endpoints from '../endpoints.js';
 
 const Main = () => {
   const type = useParams().type;
-  const { spacecraft, setSpacecraft, setFilteredSpacecraft, filteredSpacecraft } = useContext(CraftContext);
-  const { launchers, setLaunchers, filteredLaunchers, setFilteredLaunchers } = useContext(LaunchersContext);
+  const { setSpacecraft, filteredSpacecraft, setFilteredSpacecraft } = useContext(CraftContext);
+  const { setLaunchers, filteredLaunchers, setFilteredLaunchers } = useContext(LaunchersContext);
 
   let url;
   type.includes('spacecraft') ? url = endpoints.spacecraft : url = endpoints.launchers;
