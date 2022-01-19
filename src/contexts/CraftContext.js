@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const CraftContext = createContext();
 
@@ -22,3 +23,25 @@ const CraftContextProvider = (props) => {
 }
 
 export default CraftContextProvider;
+
+CraftContextProvider.propTypes = {
+  context: PropTypes.shape({
+    spacecraft: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      spacecraft_config: PropTypes.shape({
+        image_url: PropTypes.string
+      })
+    })),
+    setSpacecraft: PropTypes.func,
+    filteredSpacecraft: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      spacecraft_config: PropTypes.shape({
+        image_url: PropTypes.string
+      })
+    })),
+    setFilteredSpacecraft: PropTypes.func,
+    searchCrafts: PropTypes.func
+  })
+}

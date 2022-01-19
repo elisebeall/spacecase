@@ -1,6 +1,7 @@
 import '../css/SingleBox.css';
 import { Fragment, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const SingleBox = ({ craft }) => {
   const type = useParams().type;
@@ -18,3 +19,17 @@ const SingleBox = ({ craft }) => {
 }
 
 export default SingleBox;
+
+SingleBox.propTypes = {
+  craft: PropTypes.shape({
+    id: PropTypes.number,
+    name: PropTypes.string,
+    spacecraft_config: PropTypes.shape({
+      image_url: PropTypes.string
+    }),
+    launcher_config: PropTypes.shape({
+      name: PropTypes.string
+    }),
+    image_url: PropTypes.string
+  })
+}
