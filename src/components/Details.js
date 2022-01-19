@@ -24,26 +24,32 @@ const Details = () => {
         <>
           {error ? <Error error={error} /> :
             <>
-              <Button />
-              <table>
-                <th>{details?.name}</th>
-                <tr>
-                  <td>ID:</td>
-                  <td>{details?.id}</td>
-                  <td>SERIAL NUM:</td>
-                  <td>{details?.serial_number}</td>
-                </tr>
-                <tr>
-                  <td>STATUS:</td>
-                  <td>{details?.status.name}</td>
-                </tr>
-                <tr>
-                  <td colspan="4">{details?.description}</td>
-                </tr>
-                <tr>
-                  <td>{details?.spacecraft_config.info_link}</td>
-                </tr>
-              </table>
+              {!type.includes('spacecraft') ? <h1>COMING SOON!</h1> :
+                <div className="table-container">
+                  <h1 className="details-name">{details?.name}</h1>
+                  <table>
+                    <tr>
+                      <td className="details-label">agency :</td>
+                      <td className="details-label2">{details?.spacecraft_config.agency.abbrev}</td>
+                    </tr>
+                    <tr>
+                      <td className="details-label">serial num :</td>
+                      <td className="details-label2">{details?.serial_number}</td>
+                    </tr>
+                    <tr>
+                      <td className="details-label">status :</td>
+                      <td className="details-label2">{details?.status.name}</td>
+                    </tr>
+                    <tr>
+                      <td colSpan="4">{details?.description}</td>
+                    </tr>
+                    <tr>
+                      <td>{details?.spacecraft_config.info_link}</td>
+                    </tr>
+                  </table>
+                <Button />
+                </div>
+              }
             </>
           }
         </>

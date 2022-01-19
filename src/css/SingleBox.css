@@ -1,4 +1,5 @@
 .craft-image-container {
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,10 +8,13 @@
 
 .craft-image {
   border: 2px solid rgba(251, 251, 255, 0.3);
+  border-radius: 0.5rem;
   filter: drop-shadow(0.5rem 0.5rem 1rem rgba(101, 126, 212, 1));
   width: 20rem;
 }
 
 .craft-image-text {
-  
+  font-weight: bolder;
+  text-align: center;
+  filter: drop-shadow(0.5rem 0.5rem 1rem rgba(13, 1, 6, 1));
 }

@@ -5,7 +5,7 @@
   grid-auto-rows: minmax(5rem, auto);
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1700px) {
   .main-container {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -17,8 +17,16 @@
   }
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1050px) {
   .main-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

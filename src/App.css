@@ -82,14 +82,9 @@ input {
   border: none;
   background: none;
   height: 3rem;
-  width: 25rem;
-  font-size: 3rem;
+  width: 30rem;
+  font-size: 3.5rem;
   font-family: 'clonewars';
-}
-
-input:active {
-  all: unset;
-  display: revert;
 }
 
 a {
