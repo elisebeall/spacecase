@@ -1,5 +1,6 @@
 import '../css/Error.css';
 import { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
 const Error = ({ error }) => {
@@ -12,3 +13,7 @@ const Error = ({ error }) => {
 }
 
 export default Error;
+
+Error.propTypes = {
+  error: PropTypes.string.isRequired
+}
