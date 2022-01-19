@@ -46,6 +46,11 @@
 
 - [Showcase](https://frontend.turing.edu/projects/module-3/showcase.html)
 
+## Deployed Site:
+
+- [spacecase](https://prickly-milk.surge.sh/)
+- [spacecase](https://space-case.herokuapp.com)
+
 ## Contributors:
 
 - [Elise Beall](https://github.com/elisebeall)
