@@ -11,7 +11,6 @@ const CraftContextProvider = (props) => {
     let filteringCrafts = spacecraft.filter(craft => {
       return craft.name.toLowerCase().includes(query.toLowerCase());
     });
-    console.log('filteringCrafts', filteringCrafts)
     setFilteredSpacecraft(filteringCrafts);
   }
 
