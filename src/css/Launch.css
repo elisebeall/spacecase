@@ -1,6 +1,7 @@
 h1 {
   font-family: 'newspace';
   font-size: 13rem;
+  color: rgba(251, 251, 255, 1);
   font-stretch: extra-expanded;
   text-align: center;
 }
@@ -12,10 +13,17 @@ h1 {
   align-items: center;
 }
 
+.launch-icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .icon-large {
-  color: #FBFBFF;
-  height: 50rem;
-  width: 50rem;
+  color: rgba(251, 251, 255, 0.7);
+  height: 45rem;
+  width: 45rem;
+  margin-bottom: 2rem;
 }
 
 .icon-large:hover {

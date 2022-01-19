@@ -10,20 +10,36 @@ const Boxes = () => {
   const { filteredSpacecraft } = useContext(CraftContext);
   const { filteredLaunchers } = useContext(LaunchersContext);
 
-  return type.includes('spacecraft') ?
-    (
-      <>
-        {filteredSpacecraft.map(craft => {
-          return <SingleBox craft={craft} key={craft.id}/>
-        })}
-      </>
-    ) : (
-      <>
-        {filteredLaunchers.map(craft => {
-          return <SingleBox craft={craft} key={craft.id}/>
-        })}
-      </>
-    )
+  const filteredBoxes = () => {
+    return type.includes('spacecraft') ?
+      (
+        <>
+          {!filteredSpacecraft.length ? <h2>No results matched your search.</h2> :
+            <>
+              {filteredSpacecraft.map(craft => {
+                return <SingleBox craft={craft} key={craft.id}/>
+              })}
+            </>
+          }
+        </>
+      ) : (
+        <>
+          {!filteredSpacecraft.length ? <h2>No results matched your search.</h2> :
+            <>
+              {filteredLaunchers.map(craft => {
+                return <SingleBox craft={craft} key={craft.id}/>
+              })}
+            </>
+          }
+        </>
+      )
+  }
+
+  return (
+    <>
+      {filteredBoxes()}
+    </>
+  )
 }
 
 export default Boxes;

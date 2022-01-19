@@ -1,4 +1,13 @@
-img {
-  grid-column: 3;
-  grid-row: 2;
+.loading-container {
+  background-color: rgba(13, 1, 6, 0.8);
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-auto-rows: minmax(70rem, auto);
+  justify-content: center;
+}
+
+.loading-gif {
+  align-self: center;
+  grid-column: 2;
+  grid-row: 1;
 }

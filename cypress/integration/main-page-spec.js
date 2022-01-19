@@ -46,7 +46,20 @@ describe('spacecase main page flow', () => {
       .get('.main-container').children().should('have.length', '10')
   });
 
-  it.skip('should show a message if no results match the search query', () => {
+  it('should be able to delete the search query and reload the original data', () => {
+    cy.fixture('spacecraft.json').as('spacecraft').then((spacecraft) => {
+      cy.intercept('GET', 'https://lldev.thespacedevs.com/2.2.0/spacecraft/?limit=1000&offset=0', {
+        body: spacecraft
+      })
+    })
+      .visit('localhost:3000/spacecraft/spacecraft')
+      .get('input').type('mer')
+      .get('.main-container').children().should('have.length', '10')
+      .get('input').type('{backspace}').type('{backspace}')
+      .get('.main-container').children().should('have.length', '94')
+  });
+
+  it('should show a message if no results match the search query', () => {
     cy.fixture('spacecraft.json').as('spacecraft').then((spacecraft) => {
       cy.intercept('GET', 'https://lldev.thespacedevs.com/2.2.0/spacecraft/?limit=1000&offset=0', {
         body: spacecraft
@@ -54,7 +67,6 @@ describe('spacecase main page flow', () => {
     })
       .visit('localhost:3000/spacecraft/spacecraft')
       .get('input').type('bdjaksldbghjksalbfdhjkla')
-      .get('.main-container').children().should('have.length', '1')
       .get('h2').should('contain', 'No results matched your search.')
   });
 

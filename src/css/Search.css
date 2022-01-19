@@ -5,6 +5,7 @@
 }
 
 .icon-small {
+  padding-right: 1rem;
   filter: drop-shadow(0.5rem 0.5rem 0.5rem rgba(13, 1, 6, 0.5));
   color: rgba(251, 251, 255, 1);
   height: 5rem;
