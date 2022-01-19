@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import { useParams } from 'react-router-dom';
 import Loading from './Loading';
 import Error from './Error';
+import Button from './Button';
 import useFetch from '../hooks/useFetch';
 import endpoints from '../endpoints.js';
 
@@ -11,7 +12,9 @@ const Details = () => {
   const detailsID = useParams().id;
 
   let url;
-  type.includes('spacecraft') ? url = endpoints.craftID+`${detailsID}` : url = endpoints.launcherID+`${detailsID}`;
+  type.includes('spacecraft') ?
+    url = endpoints.craftID+`${detailsID}` :
+    url = endpoints.launcherID+`${detailsID}`;
 
   const { data: details, isLoading, error } = useFetch(url);
 
@@ -19,8 +22,9 @@ const Details = () => {
     <>
       {isLoading ? <Loading /> :
         <>
-          {error ? <Error /> :
+          {error ? <Error error={error} /> :
             <>
+              <Button />
               <table>
                 <th>{details?.name}</th>
                 <tr>
@@ -35,6 +39,9 @@ const Details = () => {
                 </tr>
                 <tr>
                   <td colspan="4">{details?.description}</td>
+                </tr>
+                <tr>
+                  <td>{details?.spacecraft_config.info_link}</td>
                 </tr>
               </table>
             </>

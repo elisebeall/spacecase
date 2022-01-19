@@ -5,10 +5,10 @@ import Button from './Button';
 
 const Nav = () => {
   return (
-    <>
+    <nav className="nav-container">
       <Search />
       <Button />
-    </>
+    </nav>
   )
 }
 

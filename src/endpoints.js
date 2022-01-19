@@ -7,7 +7,7 @@ let env = 'lldev';
 // env = 'll';
 
 const endpoints = {
-  spacecraft: `https://${env}.thespacedevs.com/2.2.0/spacecraft/?limit=100&offset=0`,
+  spacecraft: `https://${env}.thespacedevs.com/2.2.0/spacecraft/?limit=1000&offset=0`,
   /* RETURNS:
     {
       "count": 0,

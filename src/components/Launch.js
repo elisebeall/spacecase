@@ -8,12 +8,14 @@ const Launch = () => {
   return (
     <>
       <h1>spacecase</h1>
-      <Link to="/spacecraft/spacecraft">
-        <GiSpaceShuttle className="icon-large" aria-label="go to spacecraft"/>
-      </Link>
-      <Link to="/launchers/launchers">
-        <Rocket className="icon-large" aria-label="go to launchers"/>
-      </Link>
+      <div className="launch-link-container">
+        <Link to="/spacecraft/spacecraft">
+          <GiSpaceShuttle className="icon-large" aria-label="go to spacecraft"/>
+        </Link>
+        <Link to="/launchers/launchers">
+          <Rocket className="icon-large" aria-label="go to launchers"/>
+        </Link>
+      </div>
     </>
   )
 }
