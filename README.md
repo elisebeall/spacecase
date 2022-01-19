@@ -42,9 +42,9 @@
 - Context
 - REST API
 
-## Original Assignment:
+## Deployed Site:
 
-- [Showcase](https://frontend.turing.edu/projects/module-3/showcase.html)
+- [spacecase](https://space-case.herokuapp.com)
 
 ## Contributors:
 
@@ -58,3 +58,7 @@
 - Refactor to show details of for the Launch Vehicles
 - Filter/sort using 'agency' or 'year'
 - Add animation to the nav bar that allows the component to be hidden/shown
+
+## Original Assignment:
+
+- [Showcase](https://frontend.turing.edu/projects/module-3/showcase.html)
