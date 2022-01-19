@@ -1,13 +1,12 @@
 # 🚀**spacecase**🚀
 
-> **********
-> BLAST OFF!
-> **********
+> ******
+> # BLAST OFF!
+> ******
 
 ### Ever wanted to learn about every instance of every spacecraft that ever existed?
 ### Launch Vehicles more your style?
 #### Get your spacesuit!
-
 
 
 ## How to Use the App:
