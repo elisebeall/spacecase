@@ -15,7 +15,8 @@
 - Clone down this repo to your computer
 
 
-![Screenshot of clone & copy buttons](https://github.com/elisebeall/rancidtomatillos/blob/main/src/assets/clone.png)
+![Screenshot of clone & copy buttons](https://user-images.githubusercontent.com/724355/150095536-c0204dae-f505-4f7e-82a3-24fb722e6a00.png)
+
 - Access the root folder in your Terminal
 `cd ${location downloaded}/rancidtomatillos/`
 - Type `npm install` to install all required dependencies
@@ -25,7 +26,11 @@
 
 ## Preview
 
+![Launch Page](https://user-images.githubusercontent.com/724355/150095736-641da4c3-90ec-4053-8a80-e4967f293703.png)
 
+![Spacecraft](https://user-images.githubusercontent.com/724355/150095664-7b0b0267-1ea6-4831-be6b-674c835feb13.png)
+
+![Details](https://user-images.githubusercontent.com/724355/150095617-66912ce6-ce0d-417e-9731-b1ce0e403c94.png)
 
 ## Primary Technologies Used:
 
@@ -48,7 +53,7 @@
 
 ## Team Wins:
 - Building, testing, & deploying in *FIVE* days!
-- Practicing creating context and consuming it within a smaller application
+- Practicing creating & consuming Context within a smaller application
 
 ## Future Iterations:
 - Refactor to show details of for the Launch Vehicles
