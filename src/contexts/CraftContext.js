@@ -8,9 +8,10 @@ const CraftContextProvider = (props) => {
   const [filteredSpacecraft, setFilteredSpacecraft] = useState([]);
 
   const searchCrafts = (query) => {
-    let filteringCrafts = filteredSpacecraft.filter(craft => {
+    let filteringCrafts = spacecraft.filter(craft => {
       return craft.name.toLowerCase().includes(query.toLowerCase());
     });
+    console.log('filteringCrafts', filteringCrafts)
     setFilteredSpacecraft(filteringCrafts);
   }
 

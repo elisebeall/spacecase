@@ -13,11 +13,15 @@ const Boxes = () => {
   return type.includes('spacecraft') ?
     (
       <>
-        {filteredSpacecraft.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
+        {filteredSpacecraft.map(craft => {
+          return <SingleBox craft={craft} key={craft.id}/>
+        })}
       </>
     ) : (
       <>
-        {filteredLaunchers.map(craft => <SingleBox craft={craft} key={craft.id}/>)}
+        {filteredLaunchers.map(craft => {
+          return <SingleBox craft={craft} key={craft.id}/>
+        })}
       </>
     )
 }

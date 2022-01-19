@@ -17,7 +17,7 @@ const Search = () => {
   }
 
   return (
-    <>
+    <div className="search-container">
       <FaSearch className="icon-small" aria-hidden="true" />
       <input
         type="text"
@@ -25,7 +25,7 @@ const Search = () => {
         value={query}
         onChange={e => handleChange(e)}
       />
-    </>
+    </div>
   )
 }
 

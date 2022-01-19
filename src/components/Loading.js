@@ -4,9 +4,7 @@ import { Fragment } from 'react';
 
 const Loading = () => {
   return (
-    <>
-      <img src={loading} alt='loading gif' />
-    </>
+    <img src={loading} alt="loading gif" />
   )
 }
 

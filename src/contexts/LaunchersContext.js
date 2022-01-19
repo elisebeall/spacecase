@@ -8,7 +8,7 @@ const LaunchersContextProvider = (props) => {
   const [filteredLaunchers, setFilteredLaunchers] = useState([]);
 
   const searchLaunchers = (query) => {
-    let filteringLaunchers = filteredLaunchers.filter(craft => {
+    let filteringLaunchers = launchers.filter(craft => {
       return craft.name.toLowerCase().includes(query.toLowerCase());
     });
     setFilteredLaunchers(filteringLaunchers);

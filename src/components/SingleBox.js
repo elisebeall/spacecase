@@ -8,14 +8,20 @@ const SingleBox = ({ craft }) => {
 
   return type.includes('spacecraft') ?
     (
-      <Link to={`/details/${type}/${craft.id}`}>
-        <img src={craft.spacecraft_config.image_url} alt={craft.name} />
-      </Link>
+      <div className="craft-image-container">
+        <Link to={`/details/${type}/${craft.id}`}>
+          <img className="craft-image" src={craft.spacecraft_config.image_url} alt={craft.name} />
+          <h2 className="craft-image-text">{craft.name}</h2>
+        </Link>
+      </div>
     ) : (
-      <Link to={`/details/${type}/${craft.id}`}>
-        <img src={craft.image_url} alt={craft.launcher_config.name} />
-      </Link>
-    );
+      <div className="craft-image-container">
+        <Link to={`/details/${type}/${craft.id}`}>
+          <img className="craft-image" src={craft.image_url} alt={craft.launcher_config.name} />
+          <h2 className="craft-image-text">{craft.launcher_config.name}</h2>
+        </Link>
+      </div>
+    )
 }
 
 export default SingleBox;

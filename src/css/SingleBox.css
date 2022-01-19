@@ -1,3 +1,16 @@
-img {
-  width: 300px;
+.craft-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.craft-image {
+  border: 2px solid rgba(251, 251, 255, 0.3);
+  filter: drop-shadow(0.5rem 0.5rem 1rem rgba(101, 126, 212, 1));
+  width: 20rem;
+}
+
+.craft-image-text {
+  
 }
