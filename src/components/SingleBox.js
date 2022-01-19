@@ -2,13 +2,13 @@ import '../css/SingleBox.css';
 import { Fragment, useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { MdBrokenImage } from 'react-icons/md';
+import placeholder from '../assets/placeholder.png';
 
 const SingleBox = ({ craft }) => {
   const type = useParams().type;
 
   if (!craft.image_url) {
-    craft.image_url = '../assets/placeholder.png';
+    craft.image_url = placeholder;
   }
 
   return type.includes('spacecraft') ?
