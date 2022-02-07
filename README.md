@@ -17,7 +17,7 @@
 ![Screenshot of clone & copy buttons](https://user-images.githubusercontent.com/724355/150095536-c0204dae-f505-4f7e-82a3-24fb722e6a00.png)
 
 - Access the root folder in your Terminal
-`cd ${location downloaded}/rancidtomatillos/`
+`cd ${location downloaded}/spacecase/`
 - Type `npm install` to install all required dependencies
 - Type `npm start` to start local server  
 - Paste `http://localhost:8080/` into your web browser to view the application
