@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "cypress": "^9.2.1",
-    "mini-css-extract-plugin": "2.4.5"
+    "mini-css-extract-plugin": "2.4.5",
+    "start-server-and-test": "^1.14.0"
   }
 }
