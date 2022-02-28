@@ -50,7 +50,7 @@
 
 - [Elise Beall](https://github.com/elisebeall)
 
-## Team Wins:
+## Wins:
 - Building, testing, & deploying in *FIVE* days!
 - Practicing creating & consuming Context within a smaller application
 
